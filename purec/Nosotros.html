@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  <meta name="viewport" content="width-device-width, initial-scale-1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+  <!-- <link rel="stylesheet" href="/style.css"> -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
+  <title>
+    Prototipo UNI-INFORMA
+  </title>
+  <link rel="icon"
+    href="data:image/png;base64,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"
+    type="image/x-icon">
+</head>
+
+<body>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark navbar-full  " style="background-color: rgb(5, 5, 207);">
+    <div class="container-fluid">
+      <img src="https://img.icons8.com/ios/452/microphone.png" width="35" height="35" alt="Cinque Terre">
+
+      <a class="navbar-brand" href="#">UNI-INFORMA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ">
+            <a class="nav-item nav-link " href="/HTML/Inicio.html">
+              <img src="https://i.pinimg.com/originals/c8/d4/80/c8d4800521779b174595fae4e74def77.png" width="35"
+                height="35" alt="Cinque Terre">
+              Inicio <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-item nav-link active" href="Nosotros.html">
+              <img src="https://image.flaticon.com/icons/png/512/2681/2681880.png" width="35" height="35"
+                alt="Cinque Terre">
+              Nosotros <span class="sr-only"></span></a>
+          </li>
+        </ul>
+        <a href="https://www.facebook.com/IES.UNI/">
+          <form class="d-flex">
+            <button class="btn btn-outline-primary" type="button"> <img src="/Img/facebook_icon-icons.com_59205 (1).svg"
+                width="35" height="35" alt="Cinque Terre">
+            </button>
+          </form>
+          <a>
+            <a href="https://twitter.com/IES_UNI" style="margin-left: 10px">
+              <form class="d-flex">
+                <button class="btn btn-outline-primary" type="button"> <img
+                    src="https://images.vexels.com/media/users/3/137419/isolated/preview/b1a3fab214230557053ed1c4bf17b46c-logotipo-del-icono-de-twitter.png"
+                    width="35" height="35" alt="Cinque Terre">
+                </button>
+              </form>
+            </a>
+            <a href="https://www.youtube.com/c/UNIdeNicaragua" style="margin-left: 10px">
+              <form class="d-flex">
+                <button class="btn btn-outline-primary" type="button"> <img
+                    src="/Img/youtube.png"
+                    width="35" height="35" alt="Cinque Terre">
+                </button>
+              </form>
+            </a>
+            <a href="https://www.bing.com/maps?osid=7320e269-2c08-49bf-90cf-23da2284c04b&cp=12.143395~-86.273424&lvl=16&v=2&sV=2&form=S00027" style="margin-left: 10px">
+              <form class="d-flex">
+                <button class="btn btn-outline-primary" type="button"> <img
+                    src="/Img/direccion.png"
+                    width="35" height="35" alt="Cinque Terre">
+                </button>
+              </form>
+            </a>
+          </a>
+        </a>
+      </div>
+    </div>
+  </nav>
+  </head>
+
+  <!-- partial:index.partial.html -->
+
+  <body>
+    <div id="scene">
+      <div id="left-zone">
+        <ul class="list">
+          <li class="item">
+            <input type="radio"
+              id="radio_The garden strawberry (or simply strawberry /ˈstrɔːbᵊri/; Fragaria × ananassa) is a widely grown hybrid species of the genus Fragaria (collectively known as the strawberries)"
+              name="basic_carousel"
+              value="The garden strawberry (or simply strawberry /ˈstrɔːbᵊri/; Fragaria × ananassa) is a widely grown hybrid species of the genus Fragaria (collectively known as the strawberries)"
+              checked="checked" />
+            <label class="label_strawberry"
+              for="radio_The garden strawberry (or simply strawberry /ˈstrɔːbᵊri/; Fragaria × ananassa) is a widely grown hybrid species of the genus Fragaria (collectively known as the strawberries)">Mision</label>
+            <div class="content content_strawberry "><span class="picto"></span>
+              <h1>Mision</h1>
+              <p>Informar y reestablecer la comunicación escencial para todos los estudiantes de la universidad nacional
+            </div>
+          </li>
+          <li class="item">
+            <input type="radio"
+              id="radio_A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa."
+              name="basic_carousel"
+              value="A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa." />
+            <label class="label_banana"
+              for="radio_A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.">Vision</label>
+            <div class="content content_banana"><span class="picto"></span>
+              <h1>Vision</h1>
+              <p> Establecer una comunidad segura e informada
+            </div>
+          </li>
+          <li class="item">
+            <input type="radio"
+              id="radio_The apple tree (Malus domestica) is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple. It is cultivated worldwide as a fruit tree, and is the most widely grown species in the genus Malus."
+              name="basic_carousel"
+              value="The apple tree (Malus domestica) is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple. It is cultivated worldwide as a fruit tree, and is the most widely grown species in the genus Malus." />
+            <label class="label_apple"
+              for="radio_The apple tree (Malus domestica) is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple. It is cultivated worldwide as a fruit tree, and is the most widely grown species in the genus Malus.">Contactos
+              IES</label>
+            <div class="content content_apple"><span class="picto"></span>
+              <h1>Contactos UNI-IES</h1>
+              <p>Dirección: 25 Calle Suroeste, Managua 11127</p>
+              <p> Telefono: 2270-0973</p>
+            </div>
+          </li>
+          <li class="item">
+            <input type="radio"
+              id="radio_The orange (specifically, the sweet orange) is the fruit of the citrus species Citrus × sinensis in the family Rutaceae."
+              name="basic_carousel"
+              value="The orange (specifically, the sweet orange) is the fruit of the citrus species Citrus × sinensis in the family Rutaceae." />
+            <label class="label_orange"
+              for="radio_The orange (specifically, the sweet orange) is the fruit of the citrus species Citrus × sinensis in the family Rutaceae.">Somos</label>
+            <div class="content content_orange"><span class="picto"></span>
+              <h1>Somos</h1>
+              <p>Br. Fernando Duarte</p>
+              <p>Br. Gabriela Campos</p>
+              <p>Version: 0.0.02</p>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="middle-border"></div>
+      <div id="right-zone"></div>
+    </div>
+  </body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+  </script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+  <!-- partial -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
